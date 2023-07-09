@@ -1,13 +1,15 @@
 @use '../../styles/colors' as *;
 @use '../../styles/typography' as *;
+@use '../../styles/mixins' as *;
 
 .header{
     &__container{
         background-color: $primary;
+        @include padding-mobile;
     }
 
     &__name{
-        margin: 0;
+        margin: 2rem 0 0 0;
     }
 }
 
@@ -15,6 +17,9 @@
     border: 1px solid $secondary;
     border-radius: 10px;
     background-color: white;
+    margin: 1rem 0 0 0;
+    padding: 0.25rem 0.5rem;
+    display: flex;
 
     &__button{
         background-color: transparent;
@@ -22,6 +27,7 @@
     }
     &__icon{
         color: $primary;
+        font-size: 1.5rem;
     }
     &__input{
         background-color: transparent;
@@ -30,6 +36,7 @@
 
         &::placeholder{
             color: $primary;
+            font-size: 1rem;
         }
     }
 }

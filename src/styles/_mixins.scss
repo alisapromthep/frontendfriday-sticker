@@ -15,3 +15,8 @@
         @content;
     }
 }
+
+@mixin padding-mobile{
+    padding: 2rem;
+}
+
