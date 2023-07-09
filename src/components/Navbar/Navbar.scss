@@ -1,0 +1,21 @@
+@use '../../styles/colors' as *;
+@use '../../styles/typography' as *;
+@use '../../styles/mixins' as *;
+
+.nav{
+    background-color: $primary;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+    }
+
+    &__item{
+        list-style-type: none;
+    }
+}
