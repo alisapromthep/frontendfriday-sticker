@@ -1,0 +1,35 @@
+@use '../../styles/colors' as *;
+@use '../../styles/typography' as *;
+
+.header{
+    &__container{
+        background-color: $primary;
+    }
+
+    &__name{
+        margin: 0;
+    }
+}
+
+.searchbar{
+    border: 1px solid $secondary;
+    border-radius: 10px;
+    background-color: white;
+
+    &__button{
+        background-color: transparent;
+        border: none;
+    }
+    &__icon{
+        color: $primary;
+    }
+    &__input{
+        background-color: transparent;
+        border: transparent;
+        color: $primary;
+
+        &::placeholder{
+            color: $primary;
+        }
+    }
+}
