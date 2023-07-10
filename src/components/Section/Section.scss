@@ -1,0 +1,37 @@
+.section {
+    display: flex;
+    flex-direction: column;
+
+    &__top{
+        display: flex;
+        align-items: center;
+    }
+
+    &__reverse {
+        flex-direction: row-reverse;
+        justify-content: left;
+    }
+    &__title{
+        color: black;
+        text-transform: capitalize;
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+
+    &__content{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__bg{
+        background-color: rgba(8, 217, 214, 0.23);
+    }
+
+    &__img{
+        &--round{
+            width: 4rem;
+            border-radius: 50%;
+            border: 1px solid lightgrey;
+        }
+    }
+}
