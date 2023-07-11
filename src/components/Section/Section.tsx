@@ -3,6 +3,7 @@ import './Section.scss';
 interface ContentData {
     name:string;
     img:string;
+    num?:number;
 }
 
 interface SectionProps {
@@ -14,11 +15,12 @@ interface SectionProps {
     content: ContentData[];
     imgClass: string;
     contentClass?:string;
+    icon?:string;
 }
 
 
 
-const Section = ({title,logo,logoClass,bodyClass, content,imgClass,contentClass}: SectionProps) => {
+const Section = ({title,logo,logoClass,bodyClass, content,imgClass,contentClass,icon}: SectionProps) => {
     return (
         <section className={`section ${bodyClass || ""}`}>
             <div className='section__top'>
@@ -27,11 +29,22 @@ const Section = ({title,logo,logoClass,bodyClass, content,imgClass,contentClass}
             </div>
             <div className={`section__content ${contentClass  || ""}`}>
                 {
-                    content.map((image,i)=>(
-                        <img key={i} src={image.img} alt={image.name}
-                        className={imgClass}
-                        />
-                    ))
+                    content.map((image,i)=>{
+                        return (
+                            <div key={i}>
+                                <img src={image.img} alt={image.name}
+                                className={imgClass}
+                                />
+                                {
+                                    icon && 
+                                    <div className='section__save-num'>
+                                        <img src={icon} alt='save icon'/>
+                                        <p className='section__num'>{image.num}</p>
+                                    </div>
+                                }
+                            </div>
+                        )
+                        })
                 }
 
             </div>

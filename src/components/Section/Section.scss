@@ -1,6 +1,7 @@
 .section {
     display: flex;
     flex-direction: column;
+    margin: 1rem;
 
     &__top{
         display: flex;
@@ -25,6 +26,8 @@
 
     &__bg{
         background-color: rgba(8, 217, 214, 0.23);
+        border-radius: 15px;
+        padding: 1.5rem;
     }
 
     &__img{
@@ -33,5 +36,23 @@
             border-radius: 50%;
             border: 1px solid lightgrey;
         }
+
+        &--square{
+            height: 6.25rem;
+            object-fit: cover;
+        }
+
+        &--round-edge{
+            border-radius: 17px;
+        }
+    }
+    &__save-num{
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+    &__num{
+        font-size: 1.2rem;
+        padding-left: 0.25rem;
     }
 }
