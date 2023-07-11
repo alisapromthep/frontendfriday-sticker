@@ -28,6 +28,7 @@
         background-color: rgba(8, 217, 214, 0.23);
         border-radius: 15px;
         padding: 1.5rem;
+        overflow: scroll;
     }
 
     &__img{
@@ -40,6 +41,7 @@
         &--square{
             height: 6.25rem;
             object-fit: cover;
+            margin: 0.5rem;
         }
 
         &--round-edge{
