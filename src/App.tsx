@@ -14,7 +14,7 @@ function App() {
 
 
   return (
-    <>
+    <div className='app'>
     <Header/>
     {/* latest section */}
     <Section
@@ -40,7 +40,7 @@ function App() {
     icon={save}
     />
     <Navbar/>
-    </>
+    </div>
   )
 }
 
